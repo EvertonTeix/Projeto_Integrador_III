@@ -14,15 +14,15 @@ Este repositório contém informações sobre a divisão de tarefas para o proje
 
 ### Eric - FRONT/BACK
 
-Eric será responsável pelo desenvolvimento tanto do front-end quanto do back-end da aplicação. Ele garantirá uma experiência de usuário suave e eficiente, enquanto também trabalha para manter a funcionalidade do servidor.
+Eric será responsável pelo desenvolvimento tanto do front-end quanto do back-end da aplicação.
 
 ### Everton - FRONT/BACK
 
-Everton também estará trabalhando tanto no front-end quanto no back-end do projeto. Sua contribuição será fundamental para garantir a consistência entre as interfaces de usuário e a lógica de funcionamento do sistema.
+Everton também estará trabalhando tanto no front-end quanto no back-end do projeto. 
 
 ### Wagner - ALGORITMO
 
-Wagner ficará encarregado de desenvolver os algoritmos necessários para o funcionamento adequado da aplicação. Sua experiência será crucial para implementar soluções eficientes e escaláveis para os desafios técnicos do projeto.
+Wagner ficará encarregado de estudar os algoritmos necessários para o funcionamento adequado da aplicação.
 
 ### Larissa - PROTÓTIPO/DESIGN
 
@@ -34,7 +34,7 @@ Lemuel estará focado na gestão do banco de dados. Ele será responsável por p
 
 ## Fluxo de Trabalho:
 
-- Cada membro da equipe trabalhará em suas respectivas tarefas atribuídas.
+- Cada membro da equipe trabalhará em suas respectivas tarefas atribuídas, mas, quando finalizarem, poderão ajudar os demais.
 - Comunicação regular será mantida para garantir a coesão e progresso do projeto.
 - Reuniões de acompanhamento serão agendadas conforme necessário para discutir o progresso e quaisquer problemas enfrentados.
 
