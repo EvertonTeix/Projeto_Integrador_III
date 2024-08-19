@@ -6,7 +6,7 @@
      cd seu-repositorio
 ## Configure a String de Conexão no arquivo appsettings.json:
     "ConnectionStrings": {
-       "DefaultConnection": "Server=localhost;Database=fast_route_BD;User=root;Password=Cibelle2013;"
+       "DefaultConnection": "Server=localhost;Database=fast_route_BD;User=root;Password=SUA-SENHA;"
      }
 ## Navegue até a pasta do backend e instale os pacotes:
      cd fast_route_backend
