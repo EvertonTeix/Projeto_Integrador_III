@@ -1,0 +1,44 @@
+.nav-addOnibus {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+.title-addOnibus{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form-addOnibus{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.input-addOnibus{
+    width: 700px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.container-button-addOnibus{
+    display: flex;
+    justify-content: right;
+}
+.but-addOnibus{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    width: 130px;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #FEC808;
+}
+
+.text-editar-addOnibus{
+    font-size: 20px;
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\fast_route_backend.props" />
+</Project>

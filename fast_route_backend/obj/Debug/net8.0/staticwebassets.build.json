@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "rYvFgB4pXv0dXstxnEqLrXHDSC4DVYvyd40P5+UUbkc=",
+  "Source": "fast_route_backend",
+  "BasePath": "_content/fast_route_backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

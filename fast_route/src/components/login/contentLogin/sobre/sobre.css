@@ -1,0 +1,74 @@
+.desig-sobre {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container-sobre{
+    width: 100%;
+    height: 80%;
+    background-color: #FFE866AD;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.text-sobre {
+    width: 40%;
+    margin-left: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-sobre {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #7A3C0F;
+    font-weight: 700;
+}
+
+.sub-title-sobre {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #3EC3FF;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.p-text-sobre {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: #4E4C41;
+}
+
+.rodape-sobre {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elements-rodape {
+    display: flex;
+    gap: 70px;
+}
+
+.h3-list-rodape {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #f1cf0d;
+}
+
+.list-rodape {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: #888786;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.linha-rodape-sobre{
+    width: 80%;
+    height: 1px;
+    background-color: black;
+    margin: 0 auto;
+}

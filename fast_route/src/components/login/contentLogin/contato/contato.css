@@ -1,0 +1,55 @@
+.desig-contato{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.background {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 100px;
+    left: 0;
+    pointer-events: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.conteudo {
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+}
+
+.membros {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.membros img {
+    border-radius: 50%;
+    max-width: 15%;
+    height: auto;
+}
+
+.individual {
+    text-align: center;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 20px;
+}

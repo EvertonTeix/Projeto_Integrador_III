@@ -1,0 +1,6 @@
+@fast_route_backend_HostAddress = http://localhost:5164
+
+GET {{fast_route_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

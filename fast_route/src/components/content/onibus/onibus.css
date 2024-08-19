@@ -1,0 +1,62 @@
+.nav-onibus {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.title-onibus{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-onibus {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-onibus {
+    width: 700px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+.container-button-buscar-onibus {
+    display: flex;
+    justify-content: right;
+}
+
+.but-onibus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    width: 130px;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #FEC808;
+}
+
+.text-buscar-onibus{
+    font-size: 20px;
+}
+
+.container-result{
+    width: auto;
+    margin-top: 10px;
+}
+.container-result-title{
+    display: flex;
+    align-items: center; 
+    padding: 5px;
+    gap: 10px;
+}
