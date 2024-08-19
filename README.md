@@ -1,4 +1,4 @@
-# integrador3
+# Projeto Integrador III
 
 # use
 - npm install
