@@ -5,7 +5,7 @@ import { Onibus } from './onibus/onibus';
 import { Perfil } from './perfil/perfil';
 import { AddOnibus } from './onibus/adicionar-onibus/addOnibus';
 
-function Content(props: { escolha: number }) {
+function Content(props: { escolha: number, userId: number | null }) {
     switch (props.escolha) {
         case 0:
             return (
@@ -32,9 +32,10 @@ function Content(props: { escolha: number }) {
                 </div>
             )
         case 4:
+            console.log("Content received userId:", props.userId);
             return (
                 <div className="container">
-                    <AddOnibus />
+                    <AddOnibus userId={props.userId} />
                 </div>
             )
         default:

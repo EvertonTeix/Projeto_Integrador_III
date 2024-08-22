@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin\\Debug\\net8.0",
+    "\\bin\\Release\\net8.0",
+    "\\Controllers",
+    "\\Data"
+  ],
+  "SelectedNode": "\\fast_route_backend.http",
+  "PreviewInSolutionExplorer": false
+}

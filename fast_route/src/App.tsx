@@ -9,6 +9,7 @@ function App() {
   const [valor, setValor] = useState(2); // Valor inicial para a tela de login
   const [valor2, setValor2] = useState(2); // Valor inicial para o conteúdo
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de autenticação
+  const [userId, setUserId] = useState<number | null>(null); // Estado para armazenar o ID do usuário
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -21,10 +22,11 @@ function App() {
       setValor2(value);
   };
 
-  const handleLoginSuccess = () => {
+  const handleLoginSuccess = (userIdFromLogin: number) => {
     console.log('Login successful');
     setIsLoggedIn(true); // Marca como logado
     setValor(0); // Redireciona para a página Home após login
+    setUserId(userIdFromLogin); // Armazena o ID do usuário
   };
 
   return (
@@ -36,8 +38,8 @@ function App() {
         </>
       ) : (
         <>
-          <Menu onNumeroChange={handleNumChange} />
-          <Content escolha={valor2} />
+          <Menu onNumeroChange={handleNumChange} userId={userId} />
+          <Content escolha={valor2} userId={userId} />
         </>
       )}
     </div>

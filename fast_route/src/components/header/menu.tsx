@@ -10,9 +10,10 @@ import { ChevronRight } from 'lucide-react';
 
 interface MenuProps {
     onNumeroChange: (value: number) => void;
+    userId: number | null;
 }
 
-export function Menu({ onNumeroChange }: MenuProps) {
+export function Menu({ onNumeroChange, userId }: MenuProps) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const [buscaVisivel, setBuscaVisivel] = useState(false);

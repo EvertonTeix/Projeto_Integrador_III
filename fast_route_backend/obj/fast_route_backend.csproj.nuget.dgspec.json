@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laris\\OneDrive\\Área de Trabalho\\pi3-main\\fast_route_backend\\fast_route_backend.csproj": {}
+    "C:\\PI3\\PI3\\fast_route_backend\\fast_route_backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laris\\OneDrive\\Área de Trabalho\\pi3-main\\fast_route_backend\\fast_route_backend.csproj": {
+    "C:\\PI3\\PI3\\fast_route_backend\\fast_route_backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laris\\OneDrive\\Área de Trabalho\\pi3-main\\fast_route_backend\\fast_route_backend.csproj",
+        "projectUniqueName": "C:\\PI3\\PI3\\fast_route_backend\\fast_route_backend.csproj",
         "projectName": "fast_route_backend",
-        "projectPath": "C:\\Users\\laris\\OneDrive\\Área de Trabalho\\pi3-main\\fast_route_backend\\fast_route_backend.csproj",
-        "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laris\\OneDrive\\Área de Trabalho\\pi3-main\\fast_route_backend\\obj\\",
+        "projectPath": "C:\\PI3\\PI3\\fast_route_backend\\fast_route_backend.csproj",
+        "packagesPath": "C:\\Users\\lemue\\.nuget\\packages\\",
+        "outputPath": "C:\\PI3\\PI3\\fast_route_backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\laris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\lemue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -95,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

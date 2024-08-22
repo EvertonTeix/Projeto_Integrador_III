@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\PI3\\PI3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|c:\\pi3\\pi3\\fast_route_backend\\models\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|solutionrelative:fast_route_backend\\models\\veiculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|c:\\pi3\\pi3\\fast_route_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|solutionrelative:fast_route_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|c:\\pi3\\pi3\\fast_route_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|solutionrelative:fast_route_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|c:\\pi3\\pi3\\fast_route_backend\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|solutionrelative:fast_route_backend\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|c:\\pi3\\pi3\\fast_route_backend\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|solutionrelative:fast_route_backend\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|c:\\pi3\\pi3\\fast_route_backend\\controllers\\veiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|solutionrelative:fast_route_backend\\controllers\\veiculoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|c:\\pi3\\pi3\\fast_route_backend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39085C75-2B53-46C5-94EA-A3B3D6814A8C}|fast_route_backend\\fast_route_backend.csproj|solutionrelative:fast_route_backend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\PI3\\PI3\\fast_route_backend\\appsettings.json",
+              "RelativeDocumentMoniker": "fast_route_backend\\appsettings.json",
+              "ToolTip": "C:\\PI3\\PI3\\fast_route_backend\\appsettings.json",
+              "RelativeToolTip": "fast_route_backend\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-22T21:17:08.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\PI3\\PI3\\fast_route_backend\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "fast_route_backend\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\PI3\\PI3\\fast_route_backend\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "fast_route_backend\\Controllers\\UsuariosController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA0AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T22:07:47.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\PI3\\PI3\\fast_route_backend\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "fast_route_backend\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\PI3\\PI3\\fast_route_backend\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "fast_route_backend\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T21:57:20.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Veiculo.cs",
+              "DocumentMoniker": "C:\\PI3\\PI3\\fast_route_backend\\Models\\Veiculo.cs",
+              "RelativeDocumentMoniker": "fast_route_backend\\Models\\Veiculo.cs",
+              "ToolTip": "C:\\PI3\\PI3\\fast_route_backend\\Models\\Veiculo.cs",
+              "RelativeToolTip": "fast_route_backend\\Models\\Veiculo.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T21:18:41.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\PI3\\PI3\\fast_route_backend\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "fast_route_backend\\Models\\Usuario.cs",
+              "ToolTip": "C:\\PI3\\PI3\\fast_route_backend\\Models\\Usuario.cs",
+              "RelativeToolTip": "fast_route_backend\\Models\\Usuario.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T17:47:51.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VeiculosController.cs",
+              "DocumentMoniker": "C:\\PI3\\PI3\\fast_route_backend\\Controllers\\VeiculosController.cs",
+              "RelativeDocumentMoniker": "fast_route_backend\\Controllers\\VeiculosController.cs",
+              "ToolTip": "C:\\PI3\\PI3\\fast_route_backend\\Controllers\\VeiculosController.cs",
+              "RelativeToolTip": "fast_route_backend\\Controllers\\VeiculosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T22:10:49.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\PI3\\PI3\\fast_route_backend\\Program.cs",
+              "RelativeDocumentMoniker": "fast_route_backend\\Program.cs",
+              "ToolTip": "C:\\PI3\\PI3\\fast_route_backend\\Program.cs",
+              "RelativeToolTip": "fast_route_backend\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T21:05:24.218Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
