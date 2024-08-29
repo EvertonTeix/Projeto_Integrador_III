@@ -2,6 +2,7 @@
 import './addOnibus.css'
 import { CirclePlus } from 'lucide-react'
 import { useState } from 'react';
+
 export function AddOnibus({ userId }: { userId: number | null}) {
 
     const [campus, setCampus] = useState('');
@@ -46,11 +47,6 @@ export function AddOnibus({ userId }: { userId: number | null}) {
             alert('Erro ao conectar com a API.');
         }
     };
-
-
-
-
-
 
     return (
         <div className='nav-addOnibus'>

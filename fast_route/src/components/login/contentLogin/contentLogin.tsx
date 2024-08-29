@@ -4,7 +4,7 @@ import { Login } from './login/login';
 import { Registro } from './registro/registro';
 import { Sobre } from './sobre/sobre';
 
-function ContentLogin(props: { num: number, onLoginSuccess: (userId: number) => void }) {
+function ContentLogin(props: { num: number, onLoginSuccess: (userId: number, userName: string) => void }) {
     switch (props.num) {
         case 0:
             return (

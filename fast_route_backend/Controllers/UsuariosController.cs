@@ -56,4 +56,45 @@ public class UsuariosController : ControllerBase
         return BadRequest(ModelState);
     }
 
+    [HttpPut("{id}")]
+    public async Task<IActionResult> AtualizarPerfil(int id, [FromBody] Usuario usuarioAtualizado)
+    {
+        if (id != usuarioAtualizado.UsuarioId)
+        {
+            return BadRequest("ID do usuário não corresponde.");
+        }
+
+        var usuario = await _context.Usuarios.FindAsync(id);
+        if (usuario == null)
+        {
+            return NotFound("Usuário não encontrado.");
+        }
+
+        usuario.NomeUsuario = usuarioAtualizado.NomeUsuario;
+        usuario.Email = usuarioAtualizado.Email;
+        usuario.Foto = usuarioAtualizado.Foto; // Atualiza a foto se houver
+
+        try
+        {
+            await _context.SaveChangesAsync();
+            return Ok(usuario);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Erro ao atualizar o perfil: {ex.Message}");
+        }
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> ObterUsuario(int id)
+    {
+        var usuario = await _context.Usuarios.FindAsync(id);
+        if (usuario == null)
+        {
+            return NotFound("Usuário não encontrado.");
+        }
+
+        return Ok(usuario);
+    }
+
 }

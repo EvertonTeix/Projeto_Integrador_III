@@ -25,7 +25,6 @@
     border: 1px solid black;
 }
 
-
 .container-button-buscar-onibus {
     display: flex;
     justify-content: right;
@@ -44,6 +43,7 @@
     border-radius: 5px;
     margin-top: 10px;
     background-color: #FEC808;
+    cursor: pointer;
 }
 
 .text-buscar-onibus{
@@ -60,3 +60,34 @@
     padding: 5px;
     gap: 10px;
 }
+
+.onibus-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaço entre os containers dos ônibus */
+    padding: 16px;
+  }
+  
+  .onibus-item {
+    border: 1px solid #ddd; /* Borda suave */
+    border-radius: 8px; /* Cantos arredondados */
+    padding: 16px;
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .onibus-title {
+    margin: 0 0 8px; /* Margem inferior */
+    font-size: 18px;
+    color: #333; /* Cor do texto do título */
+  }
+  
+  .onibus-item p {
+    margin: 4px 0; /* Margem superior e inferior para os parágrafos */
+    font-size: 16px;
+  }
+  
+  .onibus-item p strong {
+    color: #555; /* Cor do texto em negrito */
+  }
+  

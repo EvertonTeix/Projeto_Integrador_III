@@ -11,9 +11,11 @@ import { ChevronRight } from 'lucide-react';
 interface MenuProps {
     onNumeroChange: (value: number) => void;
     userId: number | null;
+    userName: string | null;
+    onLogout: () => void;
 }
 
-export function Menu({ onNumeroChange, userId }: MenuProps) {
+export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const [buscaVisivel, setBuscaVisivel] = useState(false);
@@ -28,6 +30,7 @@ export function Menu({ onNumeroChange, userId }: MenuProps) {
         setOnibusVisivel(false);
         onNumeroChange(1);
     };
+
     const toggleHome = () => {
         setBuscaVisivel(false);
         setOnibusVisivel(false);
@@ -39,16 +42,25 @@ export function Menu({ onNumeroChange, userId }: MenuProps) {
         setBuscaVisivel(false);
         onNumeroChange(2);
     };
+
     const toggleVisualizar = () => {
-        onNumeroChange(2)
-    }
+        onNumeroChange(2);
+    };
+
     const toggleAddOnibus = () => {
         onNumeroChange(4);
-    }
+    };
 
     const togglePerfil = () => {
         onNumeroChange(3);
-    }
+    };
+
+    const toggleSair = () => {
+        const confirmLogout = window.confirm('Você realmente deseja sair?'); // Exibe a caixa de diálogo de confirmação
+        if (confirmLogout) {
+            onLogout();
+        }
+    };
 
     return (
         <nav className='container-menu'>
@@ -56,10 +68,10 @@ export function Menu({ onNumeroChange, userId }: MenuProps) {
                 <div className='Container-content-vertical'>
                     <div className='user'>
                         <CircleUser className='circleUserIcon' />
-                        <h3>Nome</h3>
+                        <h3>{userName || 'Nome'}</h3> {/* Exibe o nome do usuário */}
                     </div>
 
-                    <div className='linha'><br/></div>
+                    <div className='linha'><br /></div>
                     <div className='opt' onClick={toggleHome}>
                         <div className='alinhar'>
                             <Home />
@@ -99,26 +111,21 @@ export function Menu({ onNumeroChange, userId }: MenuProps) {
                             <li className='text-perfil'>Adicionar</li>
                         </div>
                     </div>
-                    
                     {/* =================================================================== */}
-                    <div className='linha'><br/></div>
+                    <div className='linha'><br /></div>
                     <div className='opt' onClick={togglePerfil}>
                         <div className='alinhar'>
-                            <li className='text-perfil'>Perfil</li>
+                            <li className='text-perfil'>Editar Perfil</li>
                         </div>
-                        <ChevronRight />
                     </div>
                     {/* =================================================================== */}
-                    <div className='linha'><br/></div>
-                    <div className='opt'>
+                    <div className='linha'><br /></div>
+                    <div className='opt' onClick={toggleSair}>
                         <div className='alinhar'>
                             <li className='text-sair'>Sair</li>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
             <div className='container-header'>
@@ -128,7 +135,6 @@ export function Menu({ onNumeroChange, userId }: MenuProps) {
                     <img className='fast' src={fast_logo} />
                 </div>
             </div>
-
         </nav>
     );
 }

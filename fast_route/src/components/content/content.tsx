@@ -1,7 +1,7 @@
 import { Home } from './home/home';
 import './content.css';
 import { Rotas } from './rotas/rotas';
-import { Onibus } from './onibus/onibus';
+import { Onibus } from './onibus/visualizar-onibus/onibus';
 import { Perfil } from './perfil/perfil';
 import { AddOnibus } from './onibus/adicionar-onibus/addOnibus';
 
@@ -28,7 +28,7 @@ function Content(props: { escolha: number, userId: number | null }) {
         case 3:
             return (
                 <div className="container">
-                    <Perfil />
+                    <Perfil userId={props.userId} />
                 </div>
             )
         case 4:

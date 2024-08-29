@@ -1,5 +1,6 @@
 ﻿using fast_route_backend.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
 
@@ -36,6 +37,33 @@ namespace fast_route_backend.Controllers
             }
         }
 
-        // Outros métodos como Get, Update e Delete podem ser adicionados aqui
+        [HttpGet("campus/{cidadeCampus}")]
+        public async Task<IActionResult> ObterVeiculosPorCampus(string cidadeCampus)
+        {
+            try
+            {
+                var veiculos = await _context.Veiculos
+                    .Where(v => v.CidadeCampus == cidadeCampus)
+                    .ToListAsync();
+
+                if (veiculos == null || veiculos.Count == 0)
+                {
+                    return NotFound("Nenhum veículo encontrado para o campus especificado.");
+                }
+
+                var resultado = new 
+                {
+                    QuantidadeTotal = veiculos.Count,
+                    Veiculos = veiculos
+                };
+
+                return Ok(resultado);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro interno: {ex.Message}");
+            }
+        }
+
     }
 }

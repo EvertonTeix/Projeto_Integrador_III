@@ -4,7 +4,7 @@ import user from '../../../../assets/user.png';
 import pass from '../../../../assets/password.png';
 import { useState } from 'react';
 
-export function Login({ onLoginSuccess }: { onLoginSuccess: (userId: number) => void }) {
+export function Login({ onLoginSuccess }: { onLoginSuccess: (userId: number, userName: string) => void }) {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
@@ -22,7 +22,7 @@ export function Login({ onLoginSuccess }: { onLoginSuccess: (userId: number) => 
 
             if (response.ok) {
                 const data = await response.json();
-                onLoginSuccess(data.usuarioId); // Passa o ID do usuário para o componente pai
+                onLoginSuccess(data.usuarioId, data.nomeUsuario);  // Passa o ID do usuário para o componente pai
             } else {
                 console.error('Login falhou');
             }

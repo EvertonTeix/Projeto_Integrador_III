@@ -227,3 +227,4 @@ C:\PI3\PI3\fast_route_backend\obj\Debug\net8.0\scopedcss\bundle\fast_route_backe
 C:\PI3\PI3\fast_route_backend\obj\Debug\net8.0\fast_rou.43BBFE10.Up2Date
 C:\PI3\PI3\fast_route_backend\obj\Debug\net8.0\fast_route_backend.genruntimeconfig.cache
 C:\PI3\PI3\fast_route_backend\obj\Debug\net8.0\ref\fast_route_backend.dll
+C:\Users\laris\OneDrive\Área de Trabalho\pi3-main\fast_route_backend\obj\Debug\net8.0\fast_route_backend.sourcelink.json
