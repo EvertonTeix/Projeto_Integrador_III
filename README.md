@@ -4,7 +4,7 @@
 ## Clone o Repositório:
      git clone https://github.com/larissatx11/PI3
      cd seu-repositorio
-## Configure a String de Conexão no arquivo appsettings.json:
+## Configure a String de Conexão no arquivo appsettings.json (coloque as informações do seu banco):
     "ConnectionStrings": {
        "DefaultConnection": "Server=localhost;Database=fast_route_BD;User=root;Password=SUA-SENHA;"
      }
