@@ -65,5 +65,30 @@ namespace fast_route_backend.Controllers
             }
         }
 
+
+        [HttpGet("campi")]
+public async Task<IActionResult> ObterCampi()
+{
+    try
+    {
+        var campi = await _context.Veiculos
+            .Select(v => v.CidadeCampus)
+            .Distinct()
+            .ToListAsync();
+
+        if (campi == null || campi.Count == 0)
+        {
+            return NotFound("Nenhum campus encontrado.");
+        }
+
+        return Ok(campi);
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, $"Erro interno: {ex.Message}");
+    }
+}
+
+
     }
 }

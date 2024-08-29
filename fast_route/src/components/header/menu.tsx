@@ -132,7 +132,7 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
                 <AlignJustify onClick={toggleMenu} className='menu-icon' />
                 <div className='contato'>
                     <h2 className='h2-contato'>Contato</h2>
-                    <img className='fast' src={fast_logo} />
+                    <img className='fast' src={fast_logo} onClick={toggleHome}/>
                 </div>
             </div>
         </nav>

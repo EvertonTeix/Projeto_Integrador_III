@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fast_route_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+31f98a5547c97e94b23a8500d5722b95551be50d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25dc634c44badc793b5dac07c37aecedd8270c30")]
 [assembly: System.Reflection.AssemblyProductAttribute("fast_route_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fast_route_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
