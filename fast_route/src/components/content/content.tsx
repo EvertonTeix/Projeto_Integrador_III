@@ -4,6 +4,7 @@ import { Rotas } from './rotas/rotas';
 import { Onibus } from './onibus/visualizar-onibus/onibus';
 import { Perfil } from './perfil/perfil';
 import { AddOnibus } from './onibus/adicionar-onibus/addOnibus';
+import MapComponent from './map/MapComponent';
 
 function Content(props: { escolha: number, userId: number | null }) {
     switch (props.escolha) {
@@ -38,6 +39,14 @@ function Content(props: { escolha: number, userId: number | null }) {
                     <AddOnibus userId={props.userId} />
                 </div>
             )
+        case 5:
+            return (
+                <div className="container">
+                   <div className="map-container">
+                <MapComponent center={[-5.1879418,-40.6445524]} zoom={28} />
+            </div>
+                </div>
+            );
         default:
             break;
     }

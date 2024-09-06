@@ -49,8 +49,10 @@ function App() {
         </>
       ) : (
         <>
-          <Menu onNumeroChange={handleNumChange} userId={userId} userName={userName} onLogout={handleLogout} />
-          <Content escolha={valor2} userId={userId} />
+          <div><Menu onNumeroChange={handleNumChange} userId={userId} userName={userName} onLogout={handleLogout} /></div>
+          
+          <div><Content escolha={valor2} userId={userId} /></div>
+          
         </>
       )}
     </div>

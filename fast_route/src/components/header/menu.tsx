@@ -55,6 +55,10 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
         onNumeroChange(3);
     };
 
+    const toggleMapa = () => {
+        onNumeroChange(5);
+    };
+
     const toggleSair = () => {
         const confirmLogout = window.confirm('Você realmente deseja sair?'); // Exibe a caixa de diálogo de confirmação
         if (confirmLogout) {
@@ -116,6 +120,13 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
                     <div className='opt' onClick={togglePerfil}>
                         <div className='alinhar'>
                             <li className='text-perfil'>Editar Perfil</li>
+                        </div>
+                    </div>
+                    {/* =================================================================== */}
+                    <div className='linha'><br /></div>
+                    <div className='opt' onClick={toggleMapa}>
+                        <div className='alinhar'>
+                            <li className='text-perfil'>Mapa</li>
                         </div>
                     </div>
                     {/* =================================================================== */}
