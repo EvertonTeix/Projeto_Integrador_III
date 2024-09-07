@@ -42,9 +42,17 @@ function Content(props: { escolha: number, userId: number | null }) {
         case 5:
             return (
                 <div className="container">
-                   <div className="map-container">
-                <MapComponent center={[-5.1879418,-40.6445524]} zoom={28} />
-            </div>
+                    <div className="map-container">
+                        <MapComponent center={[-5.1879418, -40.6445524]} zoom={28} />
+                    </div>
+                </div>
+            );
+        case 6:
+            return (
+                <div className="container">
+                    <div className="map-container">
+                        <MapComponent center={[-5.1879418, -40.6445524]} zoom={28} />
+                    </div>
                 </div>
             );
         default:

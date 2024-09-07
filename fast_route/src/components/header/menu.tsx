@@ -7,6 +7,7 @@ import { Home } from 'lucide-react';
 import { Route } from 'lucide-react';
 import { Bus } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
+import { Map } from 'lucide-react';
 
 interface MenuProps {
     onNumeroChange: (value: number) => void;
@@ -20,6 +21,8 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
 
     const [buscaVisivel, setBuscaVisivel] = useState(false);
     const [onibusVisivel, setOnibusVisivel] = useState(false);
+    const [mapaVisivel, setMapaVisivel] = useState(false);
+
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -55,9 +58,14 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
         onNumeroChange(3);
     };
 
-    const toggleMapa = () => {
-        onNumeroChange(5);
+    const toggleVisualizarPontos = () => {
+        onNumeroChange(5); // Defina o valor apropriado para visualizar pontos
     };
+
+    const toggleAdicionarPontos = () => {
+        onNumeroChange(6); // Defina o valor apropriado para adicionar pontos
+    };
+
 
     const toggleSair = () => {
         const confirmLogout = window.confirm('Você realmente deseja sair?'); // Exibe a caixa de diálogo de confirmação
@@ -65,6 +73,14 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
             onLogout();
         }
     };
+
+    const toggleMapaDropdown = () => {
+        setMapaVisivel(!mapaVisivel);
+        // Defina outro estado se necessário para fechar outros dropdowns
+        // setBuscaVisivel(false);
+        // setOnibusVisivel(false);
+    };
+
 
     return (
         <nav className='container-menu'>
@@ -82,7 +98,8 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
                             <li className='text-perfil'>Home</li>
                         </div>
                     </div>
-                    {/*========================BOTÃO ROTAS COM O DROPDONW========================== */}
+
+                    {/*========================BOTÃO ROTAS COM O DROPDOWN========================== */}
                     <div className='opt-rotas' onClick={toggleBusca}>
                         <div className='alinhar'>
                             <Route />
@@ -97,7 +114,7 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
                     </div>
                     {/* ===================================================== */}
 
-                    {/*========================BOTÃO ONIBUS COM O DROPDONW========================== */}
+                    {/*========================BOTÃO ONIBUS COM O DROPDOWN========================== */}
                     <div className='opt' onClick={toggleOnibus}>
                         <div className='alinhar'>
                             <Bus />
@@ -116,17 +133,32 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
                         </div>
                     </div>
                     {/* =================================================================== */}
+
+                    {/*========================BOTÃO MAPA COM O DROPDOWN========================== */}
+                    <div className='opt' onClick={toggleMapaDropdown}>
+                        <div className='alinhar'>
+                            <Map />
+                            <li className='text-perfil'>Mapa</li>
+                        </div>
+                        <ChevronRight className={mapaVisivel ? 'chevron-rotas-open' : 'chevron-rotas-closed'} />
+                    </div>
+                    <div className={mapaVisivel ? 'opt-visualizar-open' : 'opt-visualizar'} onClick={toggleVisualizarPontos}>
+                        <div className='alinhar-visualizar-open'>
+                            <li className='text-perfil'>Visualizar Pontos</li>
+                        </div>
+                    </div>
+                    <div className={mapaVisivel ? 'opt-visualizar-open' : 'opt-visualizar'} onClick={toggleAdicionarPontos}>
+                        <div className='alinhar-visualizar-open' >
+                            <li className='text-perfil'>Adicionar Pontos</li>
+                        </div>
+                    </div>
+                    {/* =================================================================== */}
+
+
                     <div className='linha'><br /></div>
                     <div className='opt' onClick={togglePerfil}>
                         <div className='alinhar'>
                             <li className='text-perfil'>Editar Perfil</li>
-                        </div>
-                    </div>
-                    {/* =================================================================== */}
-                    <div className='linha'><br /></div>
-                    <div className='opt' onClick={toggleMapa}>
-                        <div className='alinhar'>
-                            <li className='text-perfil'>Mapa</li>
                         </div>
                     </div>
                     {/* =================================================================== */}
@@ -143,7 +175,7 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
                 <AlignJustify onClick={toggleMenu} className='menu-icon' />
                 <div className='contato'>
                     <h2 className='h2-contato'>Contato</h2>
-                    <img className='fast' src={fast_logo} onClick={toggleHome}/>
+                    <img className='fast' src={fast_logo} onClick={toggleHome} />
                 </div>
             </div>
         </nav>
