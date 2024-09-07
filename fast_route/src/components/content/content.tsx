@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import { Home } from './home/home';
 import './content.css';
 import { Rotas } from './rotas/rotas';
@@ -7,6 +8,25 @@ import { AddOnibus } from './onibus/adicionar-onibus/addOnibus';
 import MapComponent from './map/MapComponent';
 
 function Content(props: { escolha: number, userId: number | null }) {
+    const [points, setPoints] = useState<{ latitude: number; longitude: number }[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        if (props.escolha === 5) {
+            // Buscar pontos quando o componente Content é carregado
+            fetch('http://localhost:5164/api/Map/locations')
+                .then(response => response.json())
+                .then(data => {
+                    setPoints(data);
+                    setLoading(false);
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar pontos:', error);
+                    setLoading(false);
+                });
+        }
+    }, [props.escolha]);
+
     switch (props.escolha) {
         case 0:
             return (
@@ -33,7 +53,6 @@ function Content(props: { escolha: number, userId: number | null }) {
                 </div>
             )
         case 4:
-            console.log("Content received userId:", props.userId);
             return (
                 <div className="container">
                     <AddOnibus userId={props.userId} />
@@ -43,7 +62,11 @@ function Content(props: { escolha: number, userId: number | null }) {
             return (
                 <div className="container">
                     <div className="map-container">
-                        <MapComponent center={[-5.1879418, -40.6445524]} zoom={28} />
+                        {loading ? (
+                            <p>Loading points...</p>
+                        ) : (
+                            <MapComponent center={[-5.1879418, -40.6445524]} zoom={28} points={points} />
+                        )}
                     </div>
                 </div>
             );
@@ -51,14 +74,13 @@ function Content(props: { escolha: number, userId: number | null }) {
             return (
                 <div className="container">
                     <div className="map-container">
-                        <MapComponent center={[-5.1879418, -40.6445524]} zoom={28} />
+                        <MapComponent center={[-5.1879418, -40.6445524]} zoom={28} points={points} />
                     </div>
                 </div>
             );
         default:
-            break;
+            return null;
     }
-
 }
 
 export default Content;

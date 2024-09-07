@@ -24,8 +24,17 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     new MySqlServerVersion(new Version(8, 0, 21))));
 
 var app = builder.Build();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
 
-app.UseCors("AllowAll");
+
+app.UseCors("AllowAll"); // Aqui é onde você aplica a política de CORS
 
 if (app.Environment.IsDevelopment())
 {
@@ -40,6 +49,9 @@ else
 }
 
 app.UseHttpsRedirection();
+app.UseRouting(); // Certifique-se de que o roteamento é usado depois de CORS
+
+app.UseAuthorization(); // Se você estiver usando autorização
 
 app.MapControllers();
 
