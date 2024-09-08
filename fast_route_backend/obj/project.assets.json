@@ -3063,19 +3063,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lu762\\.nuget\\packages\\": {}
+    "C:\\Users\\laris\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lu762\\OneDrive\\Área de Trabalho\\SPDB\\2024.1\\PI3\\fast_route_backend\\fast_route_backend.csproj",
+      "projectUniqueName": "C:\\Users\\laris\\OneDrive\\Área de Trabalho\\pi3-main\\fast_route_backend\\fast_route_backend.csproj",
       "projectName": "fast_route_backend",
-      "projectPath": "C:\\Users\\Lu762\\OneDrive\\Área de Trabalho\\SPDB\\2024.1\\PI3\\fast_route_backend\\fast_route_backend.csproj",
-      "packagesPath": "C:\\Users\\Lu762\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lu762\\OneDrive\\Área de Trabalho\\SPDB\\2024.1\\PI3\\fast_route_backend\\obj\\",
+      "projectPath": "C:\\Users\\laris\\OneDrive\\Área de Trabalho\\pi3-main\\fast_route_backend\\fast_route_backend.csproj",
+      "packagesPath": "C:\\Users\\laris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\laris\\OneDrive\\Área de Trabalho\\pi3-main\\fast_route_backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lu762\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\laris\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3156,7 +3156,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

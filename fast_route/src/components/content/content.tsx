@@ -5,19 +5,26 @@ import { Rotas } from './rotas/rotas';
 import { Onibus } from './onibus/visualizar-onibus/onibus';
 import { Perfil } from './perfil/perfil';
 import { AddOnibus } from './onibus/adicionar-onibus/addOnibus';
-import MapComponent from './map/MapComponent';
+import AddPoints from './map/MapComponent';
+import MapComponent from './map/AddPoints';
 
 function Content(props: { escolha: number, userId: number | null }) {
-    const [points, setPoints] = useState<{ latitude: number; longitude: number }[]>([]);
+    const [points, setPoints] = useState<{ latitude: number; longitude: number; address?: string }[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (props.escolha === 5) {
-            // Buscar pontos quando o componente Content é carregado
+            // Buscar pontos de entrega quando o componente Content é carregado
             fetch('http://localhost:5164/api/Map/locations')
                 .then(response => response.json())
                 .then(data => {
-                    setPoints(data);
+                    // Formatar os dados se necessário, ou apenas definir diretamente se a API já está no formato certo
+                    const formattedPoints = data.map((point: any) => ({
+                        latitude: point.latitude,
+                        longitude: point.longitude,
+                        address: point.address // Adicionar o endereço se estiver disponível
+                    }));
+                    setPoints(formattedPoints);
                     setLoading(false);
                 })
                 .catch(error => {
@@ -37,7 +44,9 @@ function Content(props: { escolha: number, userId: number | null }) {
         case 1:
             return (
                 <div className="container">
-                    <Rotas />
+                    <div className="map-container">
+                        <Rotas />
+                    </div>
                 </div>
             )
         case 2:
@@ -62,11 +71,7 @@ function Content(props: { escolha: number, userId: number | null }) {
             return (
                 <div className="container">
                     <div className="map-container">
-                        {loading ? (
-                            <p>Loading points...</p>
-                        ) : (
-                            <MapComponent center={[-5.1879418, -40.6445524]} zoom={28} points={points} />
-                        )}
+                        <AddPoints />
                     </div>
                 </div>
             );
@@ -74,7 +79,11 @@ function Content(props: { escolha: number, userId: number | null }) {
             return (
                 <div className="container">
                     <div className="map-container">
-                        <MapComponent center={[-5.1879418, -40.6445524]} zoom={28} points={points} />
+                        {loading ? (
+                            <p>Loading points...</p>
+                        ) : (
+                            <MapComponent center={[-5.1879418, -40.6445524]} zoom={15} initialPoints={points} />
+                        )}
                     </div>
                 </div>
             );

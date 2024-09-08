@@ -1,19 +1,40 @@
 .nav-rotas {
     width: 1000px;
-    height: 4000px;
+    height: auto; /* Ajuste a altura conforme o conteúdo */
     margin: 0 auto;
     display: flex;
-    justify-content: center;
-
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
 }
-.title-rotas{
+
+.title-rotas {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%; /* Faz com que o título ocupe toda a largura disponível */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 16px; /* Espaço abaixo do título */
+    margin-left: 200px;
 }
+
+.form-rotas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaço entre os elementos do formulário */
+    width: 700px; /* Define a largura do formulário para manter a consistência */
+}
+
+.input-rotas {
+    width: 100%; /* Faz com que o input ocupe toda a largura do contêiner */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
 .container-button-buscar {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end; /* Alinha o botão à direita dentro do contêiner */
+    margin-top: 10px;
 }
 
 .but {
@@ -22,26 +43,21 @@
     justify-content: center;
     list-style: none;
     gap: 10px;
-    width: 130px;
+    width: 100%; /* Ajusta a largura para preencher o contêiner pai */
+    max-width: 120px; /* Mantém a largura máxima do botão igual à do input */
     border: none;
     padding: 10px;
     font-size: 15px;
     border-radius: 5px;
-    margin-top: 10px;
     background-color: #FEC808;
-}
-.text-buscar{
-    font-size: 20px;
-}
-.form-rotas {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    cursor: pointer;
 }
 
-.input-rotas {
-    width: 700px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid black;
+.text-buscar {
+    font-size: 20px;
+}
+
+.map-container-rotas {
+    width: 700px; /* Mantém a largura do mapa consistente com o formulário e o botão */
+    margin-top: 15px;
 }

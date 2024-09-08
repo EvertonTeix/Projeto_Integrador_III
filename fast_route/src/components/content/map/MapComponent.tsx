@@ -1,68 +1,60 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMapEvent } from 'react-leaflet';
-import L, { LatLngExpression } from 'leaflet';
+import React, { useEffect, useState } from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { LatLngExpression } from 'leaflet';
+import { Signpost } from 'lucide-react';
+import './map.css';
 
-interface MapComponentProps {
-    center: LatLngExpression;
-    zoom: number;
-    points: { latitude: number; longitude: number }[];
+interface PontoEntrega {
+    id: number;
+    latitude: number;
+    longitude: number;
+    address: string;
 }
 
-const MapComponent: React.FC<MapComponentProps> = ({ center, zoom, points }) => {
+const MapComponent: React.FC = () => {
+    const [pontos, setPontos] = useState<PontoEntrega[]>([]);
 
-    // Função para lidar com cliques no mapa
-    const HandleMapClick = () => {
-        useMapEvent('click', (event) => {
-            const { lat, lng } = event.latlng;
-
-            // Exibir a caixa de diálogo de confirmação
-            const confirmAdd = window.confirm(`Deseja adicionar um ponto de entrega nas coordenadas: Latitude ${lat.toFixed(6)}, Longitude ${lng.toFixed(6)}?`);
-
-            if (confirmAdd) {
-                // Enviar os dados para o backend se o usuário confirmar
-                fetch('http://localhost:5164/api/Map/add-point', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ latitude: lat, longitude: lng })
-                }).then(response => {
-                    if (response.ok) {
-                        alert("Ponto de entrega adicionado com sucesso!");
-                        // Aqui você pode adicionar lógica para atualizar o estado com o novo ponto, se necessário
-                    } else {
-                        alert("Erro ao adicionar o ponto de entrega.");
-                    }
-                }).catch(error => {
-                    console.error('Erro ao enviar dados:', error);
-                    alert("Erro ao adicionar o ponto de entrega.");
-                });
-            }
-        });
-
-        return null; // O `useMapEvent` não precisa renderizar nada
+    // Função para buscar os pontos do banco de dados
+    const fetchPontos = async () => {
+        try {
+            const response = await fetch('http://localhost:5164/api/Map/locations');
+            const data: PontoEntrega[] = await response.json();
+            setPontos(data);
+        } catch (error) {
+            console.error("Erro ao buscar pontos de entrega:", error);
+        }
     };
 
+    // UseEffect para carregar os pontos quando o componente for montado
+    useEffect(() => {
+        fetchPontos();
+    }, []);
+
     return (
-        <MapContainer 
-            center={center} 
-            zoom={zoom} 
-            style={{ height: '100%', width: '100%' }}
-        >
+    <div className='nav-mapa'>
+        <div className='container-rotas'>
+        <div className='title-mapa'>
+            <Signpost />
+            <h2>Visualizar pontos de entrega</h2>
+        </div>
+
+        <div className="map-container" style={{ height: '600px', width: '1000px' }}>
+        <MapContainer center={[-5.1879418, -40.6445524]} zoom={13}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            {points.map((point, index) => (
-                <Marker key={index} position={[point.latitude, point.longitude]}>
+            {pontos.map((ponto) => (
+                <Marker key={ponto.id} position={[ponto.latitude, ponto.longitude] as LatLngExpression}>
                     <Popup>
-                        Ponto de entrega: <br />
-                        Latitude: {point.latitude}, Longitude: {point.longitude}
+                        {ponto.address} <br /> Lat: {ponto.latitude}, Lon: {ponto.longitude}
                     </Popup>
                 </Marker>
             ))}
-            <HandleMapClick />
         </MapContainer>
+        </div>
+        </div>
+    </div>
     );
 };
 
