@@ -1,11 +1,13 @@
 .nav-rotas {
     width: 1000px;
     height: auto; /* Ajuste a altura conforme o conteúdo */
-    margin: 0 auto;
     display: flex;
     flex-direction: column; /* Organiza o conteúdo em coluna */
     align-items: center; /* Centraliza horizontalmente o conteúdo */
+    margin: 0 auto;
+
 }
+
 
 .title-rotas {
     display: flex;
@@ -14,7 +16,7 @@
     width: 100%; /* Faz com que o título ocupe toda a largura disponível */
     text-align: left; /* Alinha o texto à esquerda */
     margin-bottom: 16px; /* Espaço abaixo do título */
-    margin-left: 200px;
+    margin-left: 300px;
 }
 
 .form-rotas {

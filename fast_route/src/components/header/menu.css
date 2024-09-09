@@ -7,6 +7,7 @@
     display: flex;
     width: 100%;
     height: auto;
+
 }
 
 .container-header {
@@ -55,7 +56,7 @@
     display: flex;
     position: absolute;
     width: 250px;
-    height: 100%;
+    height: auto;
 }
 
 .Container-content-vertical {
@@ -102,23 +103,14 @@ h3 {
     background-color: #F5F5F5;
 }
 
-.opt-rotas {
-    width: auto;
-    display: flex;
-    padding: 15px;
-    cursor: pointer;
-    list-style: none;
-    align-items: center;
-    text-decoration: none;
-    justify-content: space-between;
-    background-color: #F5F5F5;
-}
+
 
 .opt-buscar {
     height: 0;
     opacity: 0;
     transition: 0.2s;
     list-style: none;
+    visibility: hidden;
 }
 
 .opt-buscar-open {
@@ -156,6 +148,8 @@ h3 {
     opacity: 0;
     transition: 0.2s;
     list-style: none;
+    visibility: hidden;
+
 }
 
 .alinhar-visualizar-open{

@@ -87,6 +87,7 @@ export function Rotas() {
     return (
         
         <div className='nav-rotas'>
+           
             <div className='title-rotas'>
                 <Signpost />
                 <h2>Buscar Rotas</h2>
@@ -154,6 +155,7 @@ export function Rotas() {
                     {rota.length > 0 && <Polyline positions={rota} color="blue" />}
                 </MapContainer>
             </div>
+           
         </div>
 
     );

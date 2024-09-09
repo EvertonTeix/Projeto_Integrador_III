@@ -1,55 +1,73 @@
-.desig-contato{
+.desig-contato {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-
 .background {
-    position: absolute;
-    display: flex;
     width: 100%;
-    height: 100%;
-    top: 100px;
-    left: 0;
-    pointer-events: none;
-    text-align: center;
+    display: flex;
     justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Opcional: Adicione uma cor de fundo se necessário */
 }
 
 .conteudo {
-    top: 0;
-    left: 0;
-    width: 80%;
+    width: 100%;
+    max-width: 800px; /* Ajuste a largura máxima conforme necessário */
     padding: 20px;
-    font-size: 20px;
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
     font-family: 'Open Sans Hebrew', sans-serif;
 }
 
 .membros {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px; /* Ajuste a largura máxima conforme necessário */
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o número de colunas com base na largura disponível */
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 100%;
+    margin-top: 20px; /* Espaço entre a seção de conteúdo e a seção de membros */
 }
 
 .membros img {
     border-radius: 50%;
-    max-width: 15%;
+    max-width: 100px; /* Ajuste o tamanho máximo conforme necessário */
     height: auto;
 }
 
 .individual {
     text-align: center;
     font-family: 'Open Sans Hebrew', sans-serif;
-    font-size: 20px;
+    font-size: 1rem; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+/* Adicione algumas regras para melhorar o layout em dispositivos móveis */
+@media (max-width: 768px) {
+    .conteudo {
+        font-size: 1rem; /* Ajuste o tamanho da fonte para dispositivos menores */
+    }
+
+    .membros {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste o número de colunas para dispositivos menores */
+    }
+
+    .membros img {
+        max-width: 80px; /* Ajuste o tamanho máximo das imagens para dispositivos menores */
+    }
+
+    .individual h3 {
+        font-size: 0.9rem; /* Ajuste o tamanho da fonte do nome para dispositivos menores */
+    }
+
+    .individual p {
+        font-size: 0.8rem; /* Ajuste o tamanho da fonte da descrição para dispositivos menores */
+    }
 }
