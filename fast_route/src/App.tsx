@@ -5,8 +5,8 @@ import { MenuLogin } from './components/login/menuLogin/menuLogin';
 import { Menu } from './components/header/menu';
 import Content from './components/content/content';
 function App() {
-  const [valor, setValor] = useState(0); // Valor inicial para a tela de login
-  const [valor2, setValor2] = useState(0); // Valor inicial para o conteúdo
+  const [valor, setValor] = useState(2); // Valor inicial para a tela de login
+  const [valor2, setValor2] = useState(2); // Valor inicial para o conteúdo
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de autenticação
   const [userId, setUserId] = useState<number | null>(null); // Estado para armazenar o ID do usuário
   const [userName, setUserName] = useState<string | null>(null); // Estado para armazenar o nome do usuário
@@ -16,7 +16,7 @@ function App() {
       setValor2(0);
     }else{
       // volta para o login
-      setValor(0);
+      setValor2(2);
     }
   }, [isLoggedIn]);
 
