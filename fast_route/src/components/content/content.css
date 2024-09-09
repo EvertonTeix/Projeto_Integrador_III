@@ -9,9 +9,6 @@
 /* O mapa deve ocupar o restante do espaço */
 .map-container {
     flex-grow: 1; /* O mapa ocupa o espaço restante à direita */
-    position: relative;
-    margin-left: 7%;
-    margin-right: 2%;
     flex-wrap: wrap;
 }
 

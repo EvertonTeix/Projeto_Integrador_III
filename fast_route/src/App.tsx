@@ -10,7 +10,6 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de autenticação
   const [userId, setUserId] = useState<number | null>(null); // Estado para armazenar o ID do usuário
   const [userName, setUserName] = useState<string | null>(null); // Estado para armazenar o nome do usuário
-
   useEffect(() => {
     if (isLoggedIn) {
       // Atualiza valor2 quando o usuário faz login, vai para a home

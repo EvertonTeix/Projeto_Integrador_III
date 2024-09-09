@@ -7,6 +7,7 @@ import { Perfil } from './perfil/perfil';
 import { AddOnibus } from './onibus/adicionar-onibus/addOnibus';
 import AddPoints from './map/MapComponent';
 import MapComponent from './map/AddPoints';
+import { Contato } from '../login/contentLogin/contato/contato';
 
 function Content(props: { escolha: number, userId: number | null }) {
     const [points, setPoints] = useState<{ latitude: number; longitude: number; address?: string }[]>([]);
@@ -87,6 +88,13 @@ function Content(props: { escolha: number, userId: number | null }) {
                     </div>
                 </div>
             );
+        case 7:
+            return (
+                <div className="container">
+                    <Contato />
+                </div>
+            );
+
         default:
             return null;
     }

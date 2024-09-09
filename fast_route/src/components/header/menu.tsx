@@ -18,7 +18,7 @@ interface MenuProps {
 
 export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) {
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const [abreBusca, setAbreBusca] = useState(false);
     const [buscaVisivel, setBuscaVisivel] = useState(false);
     const [onibusVisivel, setOnibusVisivel] = useState(false);
     const [mapaVisivel, setMapaVisivel] = useState(false);
@@ -28,34 +28,34 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
         setMenuOpen(!menuOpen);
     };
 
+    const abrirBusca = () => {
+        setAbreBusca(!abreBusca);
+    };
+
+
     const toggleBusca = () => {
         setBuscaVisivel(!buscaVisivel);
-        setOnibusVisivel(false);
         onNumeroChange(1);
     };
 
-    const toggleHome = () => {
-        setBuscaVisivel(false);
-        setOnibusVisivel(false);
+    const toggleHome = () => {  
         onNumeroChange(0);
     };
 
     const toggleOnibus = () => {
         setOnibusVisivel(!onibusVisivel);
-        setBuscaVisivel(false);
-        onNumeroChange(2);
+
     };
 
     const toggleVisualizar = () => {
         onNumeroChange(2);
     };
 
-    const toggleAddOnibus = () => {
-        onNumeroChange(4);
-    };
-
     const togglePerfil = () => {
         onNumeroChange(3);
+    };
+    const toggleAddOnibus = () => {
+        onNumeroChange(4);
     };
 
     const toggleVisualizarPontos = () => {
@@ -64,6 +64,10 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
 
     const toggleAdicionarPontos = () => {
         onNumeroChange(6); // Defina o valor apropriado para adicionar pontos
+    };
+
+    const toggleContato = () => {  
+        onNumeroChange(7);
     };
 
 
@@ -100,14 +104,14 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
                     </div>
 
                     {/*========================BOTÃO ROTAS COM O DROPDOWN========================== */}
-                    <div className='opt-rotas' onClick={toggleBusca}>
+                    <div className='opt' onClick={abrirBusca} >
                         <div className='alinhar'>
                             <Route />
                             <li className='text-perfil'>Rotas</li>
                         </div>
-                        <ChevronRight className={buscaVisivel ? 'chevron-rotas-open' : 'chevron-rotas-closed'} />
+                        <ChevronRight className={abreBusca ? 'chevron-rotas-open' : 'chevron-rotas-closed'} />
                     </div>
-                    <div className={buscaVisivel ? 'opt-buscar-open' : 'opt-buscar'}>
+                    <div onClick={toggleBusca} className={abreBusca ? 'opt-buscar-open' : 'opt-buscar'}>
                         <div className='alinhar-buscar-open'>
                             <li className='text-perfil'>Buscar</li>
                         </div>
@@ -174,7 +178,7 @@ export function Menu({ onNumeroChange, userId, userName, onLogout }: MenuProps) 
             <div className='container-header'>
                 <AlignJustify onClick={toggleMenu} className='menu-icon' />
                 <div className='contato'>
-                    <h2 className='h2-contato'>Contato</h2>
+                    <h2 className='h2-contato' onClick={toggleContato}>Contato</h2>
                     <img className='fast' src={fast_logo} onClick={toggleHome} />
                 </div>
             </div>
