@@ -17,6 +17,7 @@ function App() {
       setValor2(0);
     }else{
       // volta para o login
+      
       setValor2(2);
     }
   }, [isLoggedIn]);
