@@ -4,25 +4,30 @@ import ContentLogin from './components/login/contentLogin/contentLogin';
 import { MenuLogin } from './components/login/menuLogin/menuLogin';
 import { Menu } from './components/header/menu';
 import Content from './components/content/content';
+
 function App() {
   const [valor, setValor] = useState(2); // Valor inicial para a tela de login
   const [valor2, setValor2] = useState(2); // Valor inicial para o conteúdo
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de autenticação
   const [userId, setUserId] = useState<number | null>(null); // Estado para armazenar o ID do usuário
   const [userName, setUserName] = useState<string | null>(null); // Estado para armazenar o nome do usuário
+
   useEffect(() => {
     if (isLoggedIn) {
       // Atualiza valor2 quando o usuário faz login, vai para a home
       setValor2(0);
-    }else{
+    } else {
       // volta para o login
-      
       setValor2(2);
     }
   }, [isLoggedIn]);
 
   const handleNumChange = (value: number) => {
-      setValor2(value);
+    setValor2(value);
+  };
+
+  const handleNomeAtualizado = (novoNome: string) => {
+    setUserName(novoNome); // Atualiza o nome do usuário no estado
   };
 
   const handleLoginSuccess = (userIdFromLogin: number, nomeUsuario: string) => {
@@ -41,7 +46,7 @@ function App() {
   };
 
   return (
-    <div className='container_app'>
+    <div className="container_app">
       {valor === 2 ? (
         <>
           <MenuLogin onNumeroChange={handleNumChange} />
@@ -49,10 +54,12 @@ function App() {
         </>
       ) : (
         <>
-          <div><Menu onNumeroChange={handleNumChange} userId={userId} userName={userName} onLogout={handleLogout} /></div>
-          
-          <div><Content escolha={valor2} userId={userId} /></div>
-          
+          <div>
+            <Menu onNumeroChange={handleNumChange} userId={userId} userName={userName} onLogout={handleLogout} />
+          </div>
+          <div>
+            <Content escolha={valor2} userId={userId} onNomeAtualizado={handleNomeAtualizado} />
+          </div>
         </>
       )}
     </div>

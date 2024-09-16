@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvent } from 'react-leaflet';
 import { LatLngExpression } from 'leaflet';
-import { Signpost } from 'lucide-react';
+import { MapPinPlusInside } from 'lucide-react';
 
 interface Point {
     latitude: number;
@@ -69,7 +69,7 @@ const AddPoints: React.FC<MapComponentProps> = ({ center, zoom, initialPoints })
         <div className='nav-mapa'>
         <div className='container-rotas'>
         <div className='title-mapa'>
-            <Signpost />
+            <MapPinPlusInside  />
             <h2>Adicionar pontos de entrega</h2>
         </div>
         <div className='subtitle-container'>

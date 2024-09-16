@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { LatLngExpression } from 'leaflet';
-import { Signpost } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import './map.css';
 
 interface PontoEntrega {
@@ -34,7 +34,7 @@ const MapComponent: React.FC = () => {
     <div className='nav-mapa'>
         <div className='container-rotas'>
         <div className='title-mapa'>
-            <Signpost />
+            <MapPin  />
             <h2>Visualizar pontos de entrega</h2>
         </div>
 

@@ -9,8 +9,12 @@ interface Usuario {
     foto?: string;
 }
 
-export function Perfil({ userId }: { userId: number | null}) {
-    
+interface PerfilProps {
+    userId: number | null;
+    onNomeAtualizado: (novoNome: string) => void; // Adicione essa prop
+}
+
+export function Perfil({ userId, onNomeAtualizado }: PerfilProps) {
     const [usuario, setUsuario] = useState<Usuario | null>(null);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [nome, setNome] = useState('');
@@ -60,6 +64,7 @@ export function Perfil({ userId }: { userId: number | null}) {
 
             if (response.ok) {
                 alert('Perfil atualizado com sucesso!');
+                onNomeAtualizado(nome); 
             } else {
                 alert('Erro ao atualizar o perfil.');
             }
