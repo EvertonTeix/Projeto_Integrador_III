@@ -12,25 +12,25 @@ Este repositório contém informações sobre a divisão de tarefas para o proje
 
 ## Tarefas Atribuídas:
 
-### Eric - FRONT/BACK
+### Eric - FRONT
 
-Eric será responsável pelo desenvolvimento tanto do front-end quanto do back-end da aplicação.
+Eric será responsável pelo desenvolvimento do front-end da aplicação, focando na criação das interfaces de usuário e interação com os elementos visuais.
 
-### Everton - FRONT/BACK
+### Everton - FRONT
 
-Everton também estará trabalhando tanto no front-end quanto no back-end do projeto. 
+Everton também atuará no front-end, colaborando com Eric na implementação das funcionalidades de interface e usabilidade da aplicação.
 
-### Wagner - ALGORITMO
+### Wagner - API DO MAPA/BACK
 
-Wagner ficará encarregado de estudar os algoritmos necessários para o funcionamento adequado da aplicação.
+Wagner ficará encarregado de integrar a API de mapas ao sistema e trabalhar no desenvolvimento das funcionalidades de back-end relacionadas.
 
-### Larissa - PROTÓTIPO/DESIGN
+### Larissa - PROTÓTIPO/DESIGN/BACK
 
 Larissa assumirá o papel de criar os protótipos e o design da aplicação. Sua atenção aos detalhes e habilidades de design ajudarão a garantir uma interface de usuário atraente e intuitiva.
 
-### Lemuel - BANCO
+### Lemuel - BANCO/BACK
 
-Lemuel estará focado na gestão do banco de dados. Ele será responsável por projetar o esquema do banco de dados, implementar a integração com o back-end e garantir a integridade e segurança dos dados.
+Lemuel cuidará da configuração e manutenção do banco de dados, além de atuar no desenvolvimento das funcionalidades de back-end.
 
 ## Fluxo de Trabalho:
 
