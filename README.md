@@ -26,7 +26,7 @@ Wagner ficará encarregado de integrar a API de mapas ao sistema e trabalhar no 
 
 ### Larissa - PROTÓTIPO/DESIGN/BACK
 
-Larissa assumirá o papel de criar os protótipos e o design da aplicação. Sua atenção aos detalhes e habilidades de design ajudarão a garantir uma interface de usuário atraente e intuitiva.
+Larissa assumirá o papel de criar os protótipos e o design da aplicação, além de atuar no desenvolvimento das funcionalidades de back-end.
 
 ### Lemuel - BANCO/BACK
 
