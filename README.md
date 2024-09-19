@@ -1,22 +1,42 @@
 # Projeto Integrador III
+# Divisão de Tarefas
 
-# Passo a Passo para Rodar o Projeto
-## Clone o Repositório:
-     git clone https://github.com/larissatx11/PI3
-     cd seu-repositorio
-## Configure a String de Conexão no arquivo appsettings.json (coloque as informações do seu banco):
-    "ConnectionStrings": {
-       "DefaultConnection": "Server=localhost;Database=fast_route_BD;User=root;Password=SUA-SENHA;"
-     }
-## Navegue até a pasta do backend e instale os pacotes:
-     cd fast_route_backend
-     dotnet restore
-## Aplique as Migrations para configurar o banco de dados:
-     dotnet ef database update
-## Rodar o Backend
-     dotnet run
-## Navegue até a pasta do frontend e instale os pacotes:
-     cd ../fast_route
-     npm install
-     npm install lucide-react
-     npm run dev
+Este repositório contém informações sobre a divisão de tarefas para o projeto em andamento. O projeto é uma aplicação que requer trabalho em diversas áreas, desde o desenvolvimento do front-end e back-end até o design, algoritmos e gerenciamento de banco de dados.
+
+## Membros da Equipe:
+
+- Eric
+- Everton
+- Wagner
+- Larissa
+- Lemuel
+
+## Tarefas Atribuídas:
+
+### Eric - FRONT
+
+Eric será responsável pelo desenvolvimento do front-end da aplicação, focando na criação das interfaces de usuário e interação com os elementos visuais.
+
+### Everton - FRONT
+
+Everton também atuará no front-end, colaborando com Eric na implementação das funcionalidades de interface e usabilidade da aplicação.
+
+### Wagner - API DO MAPA/BACK
+
+Wagner ficará encarregado de integrar a API de mapas ao sistema e trabalhar no desenvolvimento das funcionalidades de back-end relacionadas.
+
+### Larissa - PROTÓTIPO/DESIGN/BACK
+
+Larissa assumirá o papel de criar os protótipos e o design da aplicação, além de atuar no desenvolvimento das funcionalidades de back-end.
+
+### Lemuel - BANCO/BACK
+
+Lemuel cuidará da configuração e manutenção do banco de dados, além de atuar no desenvolvimento das funcionalidades de back-end.
+
+## Fluxo de Trabalho:
+
+- Cada membro da equipe trabalhará em suas respectivas tarefas atribuídas, mas, quando finalizarem, poderão ajudar os demais.
+- Comunicação regular será mantida para garantir a coesão e progresso do projeto.
+- Reuniões de acompanhamento serão agendadas conforme necessário para discutir o progresso e quaisquer problemas enfrentados.
+
+Este README será atualizado conforme o progresso do projeto, incluindo informações sobre os avanços individuais de cada membro da equipe.
